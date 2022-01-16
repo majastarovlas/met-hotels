@@ -58,4 +58,10 @@ export class RoomService {
   getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
+
+  getPrice(room: Room, numberOfNights: number): number {
+
+    const ukupnaCena: number = room.price * numberOfNights;
+    return ukupnaCena;
+  }
 }

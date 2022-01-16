@@ -56,4 +56,13 @@ export class RoomsComponent implements OnInit {
     }
   }
 
+  iznajmi(room: Room) {
+
+    const numberOfNights: number = +prompt('Unesite broj noci: ');
+
+    const ukupnaCena: number = this.roomService.getPrice(room, numberOfNights);
+
+    console.log('Ukupna cena: ' + ukupnaCena);
+  }
+
 }
