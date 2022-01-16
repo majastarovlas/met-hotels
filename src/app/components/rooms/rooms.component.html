@@ -1,0 +1,27 @@
+<div class="row row-cols-4 mt-5">
+
+  <div class="col" *ngFor="let room of rooms | filter: price">
+
+    <div class="card">
+      <img src="{{ room.imageUrl }}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ room.title }}</h5>
+        <a href="#" class="btn btn-primary">{{ room.price | currency:'EUR' }}</a>
+
+        <div class="row mt-3">
+          <div class="col">
+            <a href="#" class="btn btn-outline-primary" (click)="onUpdate(room)">Change</a>
+          </div>
+          <div class="col ms-auto">
+            <a href="#" class="btn btn-outline-danger" (click)="onDelete(room)">Delete</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<button (click)="shuffleArray()" class="btn btn-danger mt-5">Random sort</button>
