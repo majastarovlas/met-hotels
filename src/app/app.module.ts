@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './components/filter/filter.component';
 import { FiltersearchPipe } from './helpers/filtersearch.pipe';
 import { appStoreProviders } from './app.store';
+import { RoomsDirectiveComponent } from './components/rooms-directive/rooms-directive.component';
+import { NgRoomForLoopDirective } from './directives/ng-room-for-loop-directive.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { appStoreProviders } from './app.store';
     RoomFormComponent,
     FilterComponent,
     FiltersearchPipe,
+    RoomsDirectiveComponent,
+    NgRoomForLoopDirective,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [appStoreProviders],
