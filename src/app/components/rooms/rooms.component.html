@@ -3,6 +3,9 @@
   <div class="col" *ngFor="let room of rooms | filter: price">
 
     <div class="card">
+
+      <h4>id: {{room.id}}</h4>
+
       <img src="{{ room.imageUrl }}" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">{{ room.title }}</h5>
