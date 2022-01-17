@@ -6,4 +6,5 @@ export interface Room {
   title?: string;
   imageUrl?: string;
   price?: number;
+  numberOfBeds?: number;
 }

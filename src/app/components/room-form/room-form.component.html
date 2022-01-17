@@ -49,6 +49,28 @@
       </div>
     </div>
 
+    <div class="col">
+      <label for="bedNumber">No. of beds</label>
+      <input type="text" formControlName="numberOfBeds" id="bedNumber" class="form-control"
+        [ngClass]="myBedValidation()" [(ngModel)]="this.counter">
+      <div class="invalid-feedback">
+        {{ this.myFormGroup.get('price').hasError('required') ? 'Price is required.' : '' }}
+      </div>
+      <div class="invalid-feedback">
+        {{ this.myFormGroup.get('price').hasError('minlength') ? 'Min length is 1 digits.' : '' }}
+      </div>
+      <div class="invalid-feedback">
+        {{ this.myFormGroup.get('price').hasError('maxlength') ? 'Max length is 2 digits.' : '' }}
+      </div>
+      <div class="invalid-feedback">
+        {{ this.myFormGroup.get('price').hasError('pattern') ? 'Must be number.' : '' }}
+      </div>
+      <button type="button" (click)="decrement()" class="btn btn-warning btn-sm me-2">
+        -
+      </button>
+      <button type="button" (click)="increment()" class="btn btn-warning btn-sm">+</button>
+    </div>
+
     <div class="col mt-4">
       <input type="submit" value="Add room" class="btn btn-primary"
         [disabled]="(myIdValidation() !== 'is-valid') || (myTitleValidation() !== 'is-valid') || (myPriceValidation() !== 'is-valid')" />
